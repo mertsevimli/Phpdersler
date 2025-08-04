@@ -18,10 +18,10 @@ $c = 10;
 /*
 and (&&): İki koşulun da doğru olması durumunda true döner.
 or (||): İki koşuldan en az birinin doğru olması durumunda true döner.
-xor: İki koşuldan sadece birinin doğru olması durumunda true döner.
+xor: İki koşuldan sadece birinin doğru olması durumunda true döner. ikisi de doğruysa false döner. istisnai olarak kullanılır.
 ! (değil): Koşulun tersini alır, eğer koşul doğruysa false, yanlışsa true döner.
 */
-if($t < $k || $c < $t):
+if($t < $k xor $c > $t):
 echo "olumlu";
 else:
     echo "olumsuz";
