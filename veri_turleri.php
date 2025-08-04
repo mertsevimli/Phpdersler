@@ -22,7 +22,7 @@ $deger=array(1, 2, 3, 4, 5);
 echo "<br>";
 echo $deger;
 // tek tırnak ve çift tırnak arasındaki fark nedir?
-
+ssrgdytdy
     ?>
 </body>
 </html>
