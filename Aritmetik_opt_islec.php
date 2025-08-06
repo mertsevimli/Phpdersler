@@ -28,8 +28,7 @@ echo "Modül Alma: " . ($a % $b) . "<br>"; // 0
 // 3. Çarpma ve bölme *, /, %
 // 4. Toplama ve çıkarma +, -
 
-// Örnek    
-
+    
 
     ?>
 
