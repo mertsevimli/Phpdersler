@@ -60,13 +60,40 @@
 
 //* Array_pop() ile dizinin son elemanını çıkarma
 
-$elemanlar = array("elma", "armut", "muz", "çilek", "kivi" );
-$olusandizi = array_pop($elemanlar); // son elemanı çıkarır
-echo "<pre>";
-print_r($olusandizi); 
+// $elemanlar = array("elma", "armut", "muz", "çilek", "kivi" );
+// $olusandizi = array_pop($elemanlar); // son elemanı çıkarır
+// echo "<pre>";
+// print_r($elemanlar); 
 
 //** Son dizide çıkan elemanı ekrana yazdırır */
- 
+
+//* Array SHİFT ilk elemanı çıkartır.
+
+//* Array_shift() ile dizinin ilk elemanını çıkarma
+//  $elemanlar = array("elma", "armut", "muz", "çilek", "kivi" );
+// $olusandizi = array_shift($elemanlar); // son elemanı çıkarır
+// echo "<pre>";
+// print_r($elemanlar); 
+
+//* Array unshift() ile dizinin başına eleman ekleme
+// $isimler = array("Ahmet", "Mehmet");
+
+// array_unshift($isimler,"olcay", "mert"); // başına eleman ekler
+// echo "<pre>";
+// print_r($isimler);
+
+//* Array_product ile dizinin çarpımını alma | yazı yazarsan matematiksel işlemi gercekleştiremiyecektir. işlem 0 olarak gösterecektir.
+// $elemanlar = array(1, 2, 3, 4, 5);
+
+// echo "Dizinin çarpımı: " . array_product($elemanlar);
+
+//* Array_unique() ile dizideki tekrar eden elemanları kaldırma
+$elemanlar = array("elma", "armut", "muz", "çilek", "kivi", "elma", "armut");
+echo "<pre>";
+print_r(array_unique($elemanlar)); // tekrar eden elemanları kaldırır
+echo "<pre>";
+
+
     ?>
 </body>
 </html>
