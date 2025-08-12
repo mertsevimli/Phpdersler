@@ -94,6 +94,7 @@ print_r(array_unique($elemanlar)); // tekrar eden elemanları kaldırır
 echo "<pre>";
 
 
+
     ?>
 </body>
 </html>
