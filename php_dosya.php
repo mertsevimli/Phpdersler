@@ -31,12 +31,17 @@
 
 //*fread  dosya içerisindekileri görüntüler
 
-$dosya = fopen("Özel/deneme.txt", "r"); //*r okuma 
-$icerik = fread($dosya,filesize("Özel/deneme.txt"));
-echo $icerik;
-fclose($dosya);
+// $dosya = fopen("Özel/deneme.txt", "r"); //*r okuma 
+// $icerik = fread($dosya,filesize("Özel/deneme.txt"));
+// echo $icerik;
+// fclose($dosya);
 
 //*fwrite
+$dosya = fopen("Özel/deneme.txt", "a+");
+fwrite($dosya,"araba");
+fclose($dosya);
+
+
 
 ?>
 
