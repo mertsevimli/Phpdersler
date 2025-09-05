@@ -23,6 +23,7 @@
 //?İnclude ise warning verir ve script çalışmaya devam eder.
 
 //* İnclude_once ve Require_once arasındaki fark nedir?
+//*Require_once sadece 1 kere dahil eder. İnclude_once ise dosyanın daha önce dahil edilip edilmediğini kontrol eder ve eğer dahil edilmişse, tekrar dahil etmezler.
 //? İnclude_once ve Require_once arasındaki fark, require_once dosyayı bulamazsa fatal error verir ve scripti durdurur. 
 //? İnclude_once ise warning verir ve script çalışmaya devam eder.
 //? Ayrıca, include_once ve require_once, dosyanın daha önce dahil edilip edilmediğini kontrol eder ve eğer dahil edilmişse, tekrar dahil etmezler. 
