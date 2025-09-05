@@ -8,6 +8,8 @@
 <body>
 
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 // $path = __DIR__ . "/Özel";
 
 // // Klasör yoksa oluştur
@@ -37,9 +39,61 @@
 // fclose($dosya);
 
 //*fwrite
-$dosya = fopen("Özel/deneme.txt", "a+");
-fwrite($dosya,"araba");
-fclose($dosya);
+
+
+
+// $dosya=fopen("Özel/deneme.txt", "r+");
+// fwrite($dosya, "Gizem Sevimli");
+// fclose($dosya);
+
+
+//*unlink dosya silme
+
+// $dosya="Özel";
+// unlink($dosya)
+
+//*file exists  (bir dosyanın var olup olmadığını kontrol eder) Klasörün olması gerekiyor klasör yoksa hata verir
+
+// touch("Özel/merhaba.txt");
+// if(file_exists("Özel/merhaba.txt")):
+// echo "dosya var";
+// else:
+//     echo "dosya yok";
+// endif;
+
+
+//* feof --- fgets feof dosyanın sonuna gelindiğinde true döner fgets ise satır satır okuma yapar
+
+//*While döngüsü ile okuma while döngüsü çok satırlı dosyaları okumak için kullanılır
+//*
+
+// $dosya=fopen("Özel/merhaba.txt", "r");
+// $okunan = fgets($dosya);
+// print_r($okunan);
+// fclose($dosya);
+
+
+// $dosya=fopen("Özel/merhaba.txt", "r");
+// while(!feof($dosya)):
+
+
+//     $okunan = fgets($dosya);
+//     print $okunan. "<br>";
+
+
+// endwhile;
+// fclose($dosya);
+
+//*copy
+
+// $mevcut="Özel/merhaba.txt";
+// $yeni="Özel/merhaba2.txt";
+
+// if(!copy($mevcut,$yeni)):
+//     echo "dosya kopyalandı";
+// else:
+//     echo "dosya kopyalanamadı";
+// endif;
 
 
 
