@@ -1,33 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Uygulama</title>
 </head>
 <body>
-  <center>
+<center>
     <h3>Form Uygulama</h3>
     <hr>
-    <form action="git.php" method="post">
-      Adınız: <input type="text" placeholder="Adınız" required name="ad"><br><br>
-      Şifreniz: <input type="password" name="sifre"><br><br>
+<?php
 
-      <select name="secenek" required>
-        <option value="" disabled selected>Seçiniz...</option>
-        <option value="Şikayet">Şikayet</option>
-        <option value="Öneri">Öneri</option>
-      </select>
-      <br><br>
+$sayfa=$_GET["islem"];
+switch($sayfa):
+    case "git":
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $isim   = $_POST["isim"]    ?? '';
+    $sifre  = $_POST["sifre"]   ?? '';
+    $sec    = $_POST["secenek"] ?? '';
+    $tas    = $_POST["tasarim"] ?? '';
 
-      <input type="radio" name="cinsiyet" value="E"> Erkek
-      <input type="radio" name="cinsiyet" value="K"> Kadın
-      <input type="radio" name="cinsiyet" value="Gay"> Diğer
-      <br><br>
+    echo "Gelen isim : "   . $isim . "<br>";
+    echo "Gelen sifre : "  . $sifre . "<br>";
+    echo "Gelen secenek : ". $sec . "<br>";
+    echo "Gelen tasarim : ". $tas . "<br>";
+} else {
+    echo "Lütfen formu doldurup gönderin.";
+}
+        break;
+    default:
+    ?>
 
-      <input type="submit" name="buton" value="Gönder">
-      <input type="reset" name="reset" value="Sıfırla">
+    <form action="Form2.php?islem=git" method="post">
+        <input type="text" name="isim" placeholder="Adınızı Yazınız" required><br><br>
+        <input type="password" name="sifre"><br><br>
+
+        <select name="secenek">
+            <option value="Seçilmemiş">Seç</option>
+            <option value="Şikayet">Şikayet</option>
+            <option value="Öneri">Öneri</option>
+        </select><br><br>
+
+        <input type="radio" name="tasarim" value="soft"> Soft<br>
+        <input type="radio" name="tasarim" value="dark"> Dark<br>
+        <input type="radio" name="tasarim" value="beyaz"> Beyaz<br><br>
+
+        <input type="submit" name="buton" value="Gönder"><br><br>
+        <input type="reset" name="reset" value="Sıfırla"><br><br>
     </form>
-  </center>
+
+</center>
+<?php        
+endswitch;
+
+
+
+?>
 </body>
 </html>
