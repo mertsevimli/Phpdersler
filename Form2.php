@@ -6,33 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <center>
-    <h3> Form Uygulama</h3>
+  <center>
+    <h3>Form Uygulama</h3>
     <hr>
-   <form action="git.php" method="post">
-  Adınız: <input type="text" placeholder="Adınız" required="required" name="ad"> <br><br> <!-- required zorunlu alan demek  placeholder ise doldurmandan önce içinde yazan yazı--> 
-  Şifreniz: <input type="password" name="sifre"><br><br>
-  <input type="submit" name="buton"  value="Gönder">
-  <input type="reset" name="reset" value="Sıfırla">
+    <form action="git.php" method="post">
+      Adınız: <input type="text" placeholder="Adınız" required name="ad"><br><br>
+      Şifreniz: <input type="password" name="sifre"><br><br>
 
-<select name="secenek">
-<option value="0">Seç</option>
-<option value="1">Şikayet</option>
-<option value="2">Öneri</option>
+      <select name="secenek" required>
+        <option value="" disabled selected>Seçiniz...</option>
+        <option value="Şikayet">Şikayet</option>
+        <option value="Öneri">Öneri</option>
+      </select>
+      <br><br>
 
+      <input type="radio" name="cinsiyet" value="E"> Erkek
+      <input type="radio" name="cinsiyet" value="K"> Kadın
+      <input type="radio" name="cinsiyet" value="Gay"> Diğer
+      <br><br>
 
-<input type ="radio" name="cinsiyet" value="E">Erkek
-<input type ="radio" name="cinsiyet" value="K">Kadın
-<input type = "radio" name="cinsiyet" value="3">Diğer</input>
-
-
-</select>
-
-
-
-
-</form>
-
-    </center>
+      <input type="submit" name="buton" value="Gönder">
+      <input type="reset" name="reset" value="Sıfırla">
+    </form>
+  </center>
 </body>
 </html>

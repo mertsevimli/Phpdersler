@@ -5,14 +5,28 @@
     <title>Git Sayfası</title>
 </head>
 <body>
+    <center>
 <?php
-// GET ile gelen verileri al
-$isim  = $_POST['ad']    ?? '';
-$sifre = $_POST['sifre'] ?? '';
+@$isim=$_POST["ad"];
+@$sifre=$_POST["sifre"];
+@$secenek=$_POST["secenek"];
+@$cinsiyet=$_POST["cinsiyet"];
+@$submit=$_POST["buton"];
 
-// Güvenlik için htmlspecialchars ile yazdır
-echo "Adınız: " . htmlspecialchars($isim) . "<br>";
-echo "Şifreniz: " . htmlspecialchars($sifre) . "<br>";
+if($submit)
+{
+    echo "Adınız:".$isim."<br>";
+    echo "Şifreniz:".$sifre."<br>";
+    echo "Seçenek:".$secenek."<br>";
+    echo "Cinsiyet:".$cinsiyet."<br>";
+}
+else
+{
+    echo "Lütfen formu doldurunuz";
+}
+
+
 ?>
+</center>
 </body>
 </html>
