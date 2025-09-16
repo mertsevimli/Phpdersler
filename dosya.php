@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Başlıksız Belge</title>
 </head>
+
 <body>
-    <h3>Form Uygulaması</h3>
-    <hr>
+<center>
 
-    <form action = "dosya2.php" method="post" enctype="multipart/form-data">
+<h3>Form uygulama</h3>
+<hr />
 
-<input type="file" name="dosya" placeholder="Adınız"><br><br>
-<input type="submit" value="Yükle">
+<form action="dosya2.php" method="post" enctype="multipart/form-data">
+<input type="file" name="dosya" />
+<input type="submit" name="gonder" value="YÜKLE"/>
+</form>
 
-<!-- dosya transferi için form etiketine enctype="multipart/form-data" eklenmeli -->
+</center>
 
-    </form>
-
-   
-    
 </body>
 </html>
